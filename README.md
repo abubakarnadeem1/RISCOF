@@ -269,6 +269,6 @@ If it still shows an error regarding riscv_sim_RV32, make sure the right path is
 
 It will run the tests defined by ISA string `RV32IM` in pcore_isa.yaml. At the end, RISCOF will generate a report describing the pass/fail status of the tests. `riscof_work` directory will be created containg the report and the artifacts of DUT and Reference model.
 The demo is shown here:
-[Demo:](https://drive.google.com/file/d/1DNEcTJx6-JoyT0Hg1vf9kyJ1cCT4zD6v/view?usp=drive_link)
+https://github.com/abubakarnadeem1/RISCOF/blob/main/Abubakar%20Nadeem's%20Video%20-%20Sep%2018%2C%202024%20(1).mp4
    
    
