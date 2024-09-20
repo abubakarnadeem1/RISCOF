@@ -161,13 +161,15 @@ SAIL and Spike are the two reference models that are used as reference models in
     
    
     
-     cd sail-riscv
+    cd sail-riscv
+    
     ARCH=RV32 make
+    
     ARCH=RV64 make
     
     These commands build the **RV32** (32-bit) and **RV64** (64-bit) RISC-V architecture models using the Sail tool. The `make` command compiles the source code into an executable emulator.
     
-8.  **Create symbolic links for the emulators:**
+9.  **Create symbolic links for the emulators:**
  
     
     `sudo ln -s sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
@@ -175,7 +177,7 @@ SAIL and Spike are the two reference models that are used as reference models in
     
     These commands create shortcuts (symbolic links) in `/usr/bin` so you can easily run the RISC-V simulators from any directory. By doing this, you can just type `riscv_sim_RV64` or `riscv_sim_RV32` to launch the respective simulator.
     
-9.  **Update the PATH:**
+10.  **Update the PATH:**
     
    
     
@@ -202,19 +204,21 @@ SAIL and Spike are the two reference models that are used as reference models in
 3.  **Navigate to the Project Directory and Create a Build Folder:**
     
     cd riscv-isa-sim
+    
     mkdir build
+    
     cd build
     
     Here, you navigate into the cloned repository folder (`riscv-isa-sim`) and create a **build directory** where the compiled code will be stored. The `build` directory helps keep the source code separate from the compiled files.
     
-4.  **Configure the Build Environment:**
+5.  **Configure the Build Environment:**
 
     
     `../configure --prefix=$RISCV` 
     
     This command configures the build system for the RISC-V ISA simulator. The `--prefix=$RISCV` option tells the build system where to install the simulator binaries. You need to have `$RISCV` environment variable set up beforehand (pointing to your preferred installation directory).
     
-5.  **Compile the Simulator:**
+6.  **Compile the Simulator:**
     
   
     
@@ -222,14 +226,14 @@ SAIL and Spike are the two reference models that are used as reference models in
     
     This command compiles the simulator using the build instructions created during the configuration step. It turns the source code into executable binaries.
     
-6.  **Install the Simulator:**
+7.  **Install the Simulator:**
     
    
     
     `make install` 
     
     This installs the compiled simulator binaries to the directory specified by `$RISCV`. After this step, the Spike simulator will be available for use, allowing you to simulate and test RISC-V programs.
-7.  **Confirming the installation**
+8.  **Confirming the installation**
     
     `spike` 
     Write spike on the terminal to check whether it shows the same output.
@@ -260,6 +264,7 @@ To check that Verilator was installed correctly by running:
    Then, clone the repository from git using the command
    
    `git clone https://github.com/riscv-non-isa/riscv-arch-test.git`
+   
    Make sure it is cloned correctly.
    After this, we will open the readme file from verif folder and run the following command from verif directory.
    
