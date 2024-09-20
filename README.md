@@ -41,13 +41,13 @@ To use **RISCOF**, you'll need to install Python 3, update your pip (Python pack
     
     `sudo apt-get install python3` 
     
-    [Output:](https://drive.google.com/file/d/1VR03Mu3U8HIx_6mN-U5aQGHzG_59ox8q/view?usp=drive_link)
+![image](https://github.com/user-attachments/assets/96a7c225-944f-4ef8-8982-47129d4df433)
 
 2.  **Install pip3:**
     
     `sudo apt-install python3-pip` 
     
-    [Output:](https://drive.google.com/file/d/1w3Fo0alkYSArvC-NhHUB9PTvjIgA7zks/view?usp=drive_link)
+![image](https://github.com/user-attachments/assets/8d5f7794-6a23-4a6c-bc2e-7c93fb289a0d)
 
     
 3.  **Upgrade pip:**
@@ -57,17 +57,18 @@ To use **RISCOF**, you'll need to install Python 3, update your pip (Python pack
     
     This updates **pip**, the package manager for Python, so it can handle the latest packages and dependencies.
     
-    [Output:](https://drive.google.com/file/d/1iHflGxxy0mmryuOVAKltlCGs5VjCGduA/view?usp=drive_link)
+    ![image](https://github.com/user-attachments/assets/9e6c8580-5919-4a54-9513-e724e01c9eb8)
+
     
 4.  **Install RISCOF:**
-    
-    
     
     `pip3 install -U riscof` 
     
     This command installs or updates **RISCOF**, the framework used for RISC-V compliance testing.
     
-    [Output:](https://drive.google.com/file/d/1Nq4sFy9020sNQbjZMpb-V8CpWgudtvuo/view?usp=drive_link)
+
+    ![image](https://github.com/user-attachments/assets/39032d91-7785-49a0-b83c-504edbdb76fe)
+
     
 
 ### Handling Common Installation Error
@@ -92,7 +93,8 @@ This installs the correct version of **pyyaml** (version 5.2). After that, you c
 ## Testing RISCOF
 
 Once you have installed RISCOF you can execute `riscof  --help` to print the help routine, it will show the output like this.
-[Output:](https://drive.google.com/file/d/1ih4y_M8IKTdr7kINOWb7r81cijA6FR7L/view?usp=drive_link)
+![image](https://github.com/user-attachments/assets/e0a5a400-63e3-4605-89f7-651704844ec0)
+
 
 # Install RISCV-GNU Toolchain
 For downloading the riscv-gnu toolchain, first check your ubuntu version. According to the version of ubuntu, corresponding toolchain can be downloaded from the link https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2024.09.03.
@@ -117,15 +119,16 @@ SAIL and Spike are the two reference models that are used as reference models in
     -   **libgmp-dev**: A library for arithmetic operations (used by Sail).
     -   **z3**: A theorem prover used by Sail for formal verification.
     -   **pkg-config** and **zlib1g-dev**: Libraries for handling dependencies.
-    [Output:](https://drive.google.com/file/d/1KbuHqR9l7r8PMCK6sZK_3H5nIf-zVurL/view?usp=drive_link)
-    
+![image](https://github.com/user-attachments/assets/c43066b5-ddc0-46cc-ab79-a4b4281341ea)
+  
 2.  **Initialize OPAM:**
    
     
     `opam init -y --disable-sandboxing` 
     
     This initializes **OPAM**, the OCaml package manager, to install OCaml packages. The `--disable-sandboxing` option avoids permission issues during installation.
-    [Output:](https://drive.google.com/file/d/1ZC1yo0mS5phmvTjNFSH_FCFLjkwtwfdg/view?usp=drive_link)
+    ![image](https://github.com/user-attachments/assets/8f766839-1137-44c7-9264-2bf0dbd47ea1)
+
     
 3.  **Install Sail:**
   
@@ -133,7 +136,8 @@ SAIL and Spike are the two reference models that are used as reference models in
     `opam install sail -y` 
     
     This installs the **Sail** package from OPAM, which provides the Sail RISC-V specification.
-    [Output:](https://drive.google.com/file/d/1qV-ogGD9BhnVEhsZk8cfeK2xrLFB7vIb/view?usp=drive_link)
+    ![image](https://github.com/user-attachments/assets/a8bff7d2-5f59-4ef0-98be-050ff497d2a4)
+
     
 4.  **Set the environment:**
     
@@ -150,9 +154,10 @@ SAIL and Spike are the two reference models that are used as reference models in
     `git clone https://github.com/riscv/sail-riscv.git` 
     
     This clones the official **Sail RISC-V** repository from GitHub, which contains the RISC-V models and emulators.
-    [Output:](https://drive.google.com/file/d/1XCXo723t86JRfj-XNaK33b_ChFyyRV2c/view?usp=drive_link)
+    ![image](https://github.com/user-attachments/assets/257036b3-6823-4f1b-86da-584791251c83)
+
     
-6.  **Build the RISC-V models for 32-bit and 64-bit architectures:**
+7.  **Build the RISC-V models for 32-bit and 64-bit architectures:**
     
    
     
@@ -162,7 +167,7 @@ SAIL and Spike are the two reference models that are used as reference models in
     
     These commands build the **RV32** (32-bit) and **RV64** (64-bit) RISC-V architecture models using the Sail tool. The `make` command compiles the source code into an executable emulator.
     
-7.  **Create symbolic links for the emulators:**
+8.  **Create symbolic links for the emulators:**
  
     
     `sudo ln -s sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
@@ -170,7 +175,7 @@ SAIL and Spike are the two reference models that are used as reference models in
     
     These commands create shortcuts (symbolic links) in `/usr/bin` so you can easily run the RISC-V simulators from any directory. By doing this, you can just type `riscv_sim_RV64` or `riscv_sim_RV32` to launch the respective simulator.
     
-8.  **Update the PATH:**
+9.  **Update the PATH:**
     
    
     
@@ -225,13 +230,11 @@ SAIL and Spike are the two reference models that are used as reference models in
     
     This installs the compiled simulator binaries to the directory specified by `$RISCV`. After this step, the Spike simulator will be available for use, allowing you to simulate and test RISC-V programs.
 7.  **Confirming the installation**
-
-    
-   
     
     `spike` 
     Write spike on the terminal to check whether it shows the same output.
-    [Output:](https://drive.google.com/file/d/1wthz5SXO8S8kudCxAl1TXxnsAVpBZifG/view?usp=drive_link)
+    ![image](https://github.com/user-attachments/assets/72a9428c-52be-4e23-a039-538927c8c039)
+
 
 ## Installation of Verilator
 For correct working of RISCOF, verilator needs to be installed too by the command.
